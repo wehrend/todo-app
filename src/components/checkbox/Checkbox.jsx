@@ -1,7 +1,13 @@
-function Checkbox() {
+function Checkbox({ todoItem, handleChangeCheckbox }) {
   return (
     <div>
-      <input id="1" type="checkbox"></input>;<label for="1">Test</label>
+      <input
+        id={todoItem.id}
+        type="checkbox"
+        checked={todoItem.done}
+        onChange={handleChangeCheckbox}
+      ></input>
+      ;<label for={todoItem.id}>{todoItem.content}</label>
     </div>
   );
 }
