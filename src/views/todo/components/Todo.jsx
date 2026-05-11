@@ -1,6 +1,8 @@
 import { useState } from "react";
 import TodoItem from "./todoitem/TodoItem";
 import TodoHeader from "./todoheader/TodoHeader";
+import TodoBody from "./todobody/TodoBody";
+import TodoList from "../../todolist/TodoList";
 
 function Todo() {
   const [todos, setTodos] = useState([
@@ -20,10 +22,9 @@ function Todo() {
 
   return (
     <div>
+      <TodoList />
       <TodoHeader />
-      {todos.map((todo) => (
-        <TodoItem todoItem={todo} handleChangeCheckbox={handleChangeCheckbox} />
-      ))}
+      <TodoBody todos={todos} />
     </div>
   );
 }
