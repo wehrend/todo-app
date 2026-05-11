@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TodoItem from "./todoitem/TodoItem";
+import TodoHeader from "./todoheader/TodoHeader";
 
 function Todo() {
   const [todos, setTodos] = useState([
@@ -19,6 +20,7 @@ function Todo() {
 
   return (
     <div>
+      <TodoHeader />
       {todos.map((todo) => (
         <TodoItem todoItem={todo} handleChangeCheckbox={handleChangeCheckbox} />
       ))}

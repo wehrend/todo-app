@@ -8,7 +8,7 @@ function TodoItem({ todoItem, handleChangeCheckbox }) {
         todoItem={todoItem}
         handleChangeCheckbox={handleChangeCheckbox}
       />
-      <Button />
+      <Button buttonValue={"Löschen"} />
     </div>
   );
 }
