@@ -1,4 +1,10 @@
 function Checkbox({ todoItem, handleChangeCheckbox }) {
+  function handleChangeCheckboxEvent(event) {
+    const updatedTodoItem = { ...todoItem };
+    updatedTodoItem.done = event.target.checked;
+    handleChangeCheckbox(updatedTodoItem);
+  }
+
   return (
     <div>
       <input

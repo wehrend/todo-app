@@ -10,8 +10,11 @@ function Todo() {
     },
   ]);
 
-  function handleChangeCheckbox(event) {
-    console.log(event.target.checked);
+  function handleChangeCheckbox(todoItem) {
+    const todoItemIndex = todos.findIndex((todo) => todo.id === todoItem.id);
+    const updatedTodos = [...todos];
+    updatedTodos.splice(todoItemIndex, 1, todoItem);
+    setTodos(updatedTodos);
   }
 
   return (
