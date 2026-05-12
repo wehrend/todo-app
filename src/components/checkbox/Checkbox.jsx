@@ -13,7 +13,7 @@ function Checkbox({ todoItem, handleChangeCheckbox }) {
         checked={todoItem.done}
         onChange={handleChangeCheckbox}
       ></input>
-      ;<label for={todoItem.id}>{todoItem.content}</label>
+      <label for={todoItem.id}>{todoItem.content}</label>
     </div>
   );
 }

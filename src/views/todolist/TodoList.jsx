@@ -18,9 +18,15 @@ function TodoList({}) {
     setTodos(updatedTodos);
   }
 
+  function addTodoItemToList(todoItem) {
+    const updatedTodos = [...todos];
+    updatedTodos.push(todoItem);
+    setTodos(updatedTodos);
+  }
+
   return (
     <div>
-      <TodoHeader />
+      <TodoHeader addTodoItemToList={addTodoItemToList} />
       <TodoBody todos={todos} handleChangeCheckbox={handleChangeCheckbox} />
     </div>
   );
