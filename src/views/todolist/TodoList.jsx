@@ -24,6 +24,13 @@ function TodoList({}) {
     setTodos(updatedTodos);
   }
 
+  function deleteTodoItemFromList(todoId) {
+    const filteredTodos = todos.filter((todo) => {
+      return todo.id !== todoId;
+    });
+    setTodos(filteredTodos);
+  }
+
   return (
     <div>
       <TodoHeader addTodoItemToList={addTodoItemToList} />

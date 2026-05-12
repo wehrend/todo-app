@@ -1,4 +1,4 @@
-function Button({ buttonValue, handleButtonClickEvent }) {
+function Button({ buttonValue, handleButtonClickEvent, handleOnClick }) {
   return <button onClick={handleButtonClickEvent}>{buttonValue}</button>;
 }
 
