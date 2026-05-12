@@ -1,5 +1,29 @@
+import TodoHeader from "../todo/components/todoheader/TodoHeader";
+import TodoBody from "../todo/components/todobody/TodoBody";
+import { useState } from "react";
+
 function TodoList({}) {
-  return <div>Hallo</div>;
+  const [todos, setTodos] = useState([
+    {
+      id: Math.random(),
+      content: "Wäsche waschen",
+      done: "false",
+    },
+  ]);
+
+  function handleChangeCheckbox(todoItem) {
+    const todoItemIndex = todos.findIndex((todo) => todo.id === todoItem.id);
+    const updatedTodos = [...todos];
+    updatedTodos.splice(todoItemIndex, 1, todoItem);
+    setTodos(updatedTodos);
+  }
+
+  return (
+    <div>
+      <TodoHeader />
+      <TodoBody todos={todos} handleChangeCheckbox={handleChangeCheckbox} />
+    </div>
+  );
 }
 
 export default TodoList;
