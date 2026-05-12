@@ -14,7 +14,7 @@ function TodoHeader({ addTodoItemToList }) {
     addTodoItemToList({
       id: Math.random(),
       content: inputValue,
-      done: "false",
+      done: false,
     });
     setInputValue("");
   }

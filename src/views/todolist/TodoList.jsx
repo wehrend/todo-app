@@ -34,7 +34,11 @@ function TodoList({}) {
   return (
     <div>
       <TodoHeader addTodoItemToList={addTodoItemToList} />
-      <TodoBody todos={todos} handleChangeCheckbox={handleChangeCheckbox} />
+      <TodoBody
+        todos={todos}
+        handleChangeCheckbox={handleChangeCheckbox}
+        deleteTodoItemFromList={deleteTodoItemFromList}
+      />
     </div>
   );
 }
