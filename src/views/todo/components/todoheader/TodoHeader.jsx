@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "../../../../components/button/Button";
 import Input from "../../../../components/input/Input";
 import { addTodoItemToList } from "../../../todolist/TodoList";
+import "./TodoHeader.css";
 
 function TodoHeader({ addTodoItemToList }) {
   const [inputValue, setInputValue] = useState("");

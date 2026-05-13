@@ -1,5 +1,6 @@
 import Checkbox from "../../../../components/checkbox/Checkbox";
 import Button from "../../../../components/button/Button";
+import "./TodoItem.css";
 
 function TodoItem({ todoItem, handleChangeCheckbox, deleteTodoItemFromList }) {
   console.log("--- TodoItem Render Check ---");
@@ -16,7 +17,7 @@ function TodoItem({ todoItem, handleChangeCheckbox, deleteTodoItemFromList }) {
   }
 
   return (
-    <div>
+    <div class="todo-item">
       <Checkbox
         todoItem={todoItem}
         handleChangeCheckbox={handleChangeCheckboxEvent}

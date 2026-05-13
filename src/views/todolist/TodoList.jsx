@@ -1,13 +1,14 @@
 import TodoHeader from "../todo/components/todoheader/TodoHeader";
 import TodoBody from "../todo/components/todobody/TodoBody";
 import { useState } from "react";
+import "./TodoList.css";
 
 function TodoList({}) {
   const [todos, setTodos] = useState([
     {
       id: Math.random(),
       content: "Wäsche waschen",
-      done: "false",
+      done: false,
     },
   ]);
 
@@ -32,7 +33,7 @@ function TodoList({}) {
   }
 
   return (
-    <div>
+    <div class="todo-list">
       <TodoHeader addTodoItemToList={addTodoItemToList} />
       <TodoBody
         todos={todos}
