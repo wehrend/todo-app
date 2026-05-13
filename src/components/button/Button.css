@@ -1,5 +1,5 @@
 button {
-  background-color: greenyellow;
+  background-color: var(--secondary);
   border: none;
   border-radius: 5px;
   padding: 0.5rem;
